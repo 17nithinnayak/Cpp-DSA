@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int profit = 0;
+        int minprice = INT_MAX;
+        int maxprofit = 0;
+        for(int val : prices) {
+            if(val<minprice){
+                minprice=val;
+            }
+            else{
+                 profit = val - minprice;
+            }
+            if(profit>maxprofit)
+            {
+                maxprofit=profit;
+            }
+            
+        }
+    return maxprofit;
+    }
+    
+};
